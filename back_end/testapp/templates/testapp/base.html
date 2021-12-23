@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static "images/logo.png" %}" type="logo">
+
+    <link rel="stylesheet" href="{% static "css/open-iconic-bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/animate.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/ionicons.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "css/icomoon.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <div class="py-1 bg-black top">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+		    			<div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">+ 1235 2355 98</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">youremail@email.com</span>
+					    </div>
+					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+							{% if user.is_authenticated %}
+								<p class="mb-0 register-link">{{ user.get_username }} <a href="{% url 'logout' %}">Log Out</a></p>
+      						{% else %}
+								<p class="mb-0 register-link"><a href="{% url 'create' %}" class="mr-3">Sign Up</a><a href="{% url 'login' %}">Sign In</a></p>
+      						{% endif %}
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+  	{% block bodycontent %}{% endblock %}
+
+    <footer class="ftco-footer ftco-section img" style="background-image: url({% static "images/footer-bg.jpg" %});">
+    	<div class="overlay"></div>
+      <div class="container-fluid px-md-5">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Mediplus</h2>
+              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <ul class="ftco-footer-social list-unstyled mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/?lang=ru"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://ru-ru.facebook.com/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Departments</h2>
+              <ul class="list-unstyled">
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Neurology</li>
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Opthalmology</li>
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Nuclear Magnetic</li>
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Surgical</li>
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Cardiology</li>
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Dental</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li style="color:#0000FF"><a href="{% url 'main' %}"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li style="color:#0000FF"><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li style="color:#0000FF"><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>Departments</a></li>
+                <li style="color:#0000FF"><a href="#doctor-section"><span class="icon-long-arrow-right mr-2"></span>Doctors</a></li>
+                <li style="color:#0000FF"><a href="#blog-section"><span class="icon-long-arrow-right mr-2"></span>Blog</a></li>
+                <li style="color:#0000FF"><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Emergency Services</li>
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Qualified Doctors</li>
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>Outdoors Checkup</li>
+                <li style="color:#0000FF"><span class="icon-long-arrow-right mr-2"></span>24 Hours Services</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a><span class="icon icon-envelope pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static "js/jquery.min.js" %}"></script>
+  <script src="{% static "js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "js/popper.min.js" %}"></script>
+  <script src="{% static "js/bootstrap.min.js" %}"></script>
+  <script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "js/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "js/aos.js" %}"></script>
+  <script src="{% static "js/jquery.animateNumber.min.js" %}"></script>
+  <script src="{% static "js/scrollax.min.js" %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static "js/google-map.js" %}"></script>
+
+  <script src="{% static "js/main.js" %}"></script>
+
+  </body>
+</html>

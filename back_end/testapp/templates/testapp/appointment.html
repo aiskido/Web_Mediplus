@@ -1,0 +1,168 @@
+{% extends 'testapp/base.html' %}
+{% load static %}
+{% block title %}
+Mediplus-appointment
+{% endblock %}
+
+{% block bodycontent %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="/">Mediplus</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="{% url 'main' %}" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="{% url 'main' %}#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="{% url 'main' %}#department-section" class="nav-link"><span>Department</span></a></li>
+	          <li class="nav-item"><a href="{% url 'main' %}#doctor-section" class="nav-link"><span>Doctors</span></a></li>
+	          <li class="nav-item"><a href="{% url 'main' %}#blog-section" class="nav-link"><span>Blog</span></a></li>
+	          <li class="nav-item"><a href="{% url 'main' %}#contact-section" class="nav-link"><span>Contact</span></a></li>
+	          <li class="nav-item cta mr-md-2"><a href="{% url 'appointment' %}" class="nav-link">Appointment</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+	  <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static "images/bg_1.jpg" %}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+          <div class="col-md-9 ftco-animate pb-4">
+            <h1 class="mb-3 bread">Appointment</h1>
+             <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'main' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Appointment <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 col-lg-5 d-flex">
+    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url({% static "images/about.jpg" %});">
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-7 pl-lg-5 py-md-5">
+    				<div class="py-md-5">
+	    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate p-4 p-lg-5">
+			            <h2 class="mb-4">We Are <span>Mediplus</span> A Medical Clinic</h2>
+			            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+			          </div>
+			        </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2 bg-light">
+			<div class="container">
+        <div class="row d-flex">
+	        <div class="col-md-7 py-5">
+	        	<div class="py-lg-5">
+		        	<div class="row justify-content-center pb-5">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-3">Our Services</h2>
+			          </div>
+			        </div>
+			        <div class="row">
+			        	<div class="col-md-6 d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services d-flex">
+			              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-ambulance"></span></div>
+			              <div class="media-body pl-md-4">
+			                <h3 class="heading mb-3">Emergency Services</h3>
+			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+			              </div>
+			            </div>
+			          </div>
+			          <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services d-flex">
+			              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-doctor"></span></div>
+			              <div class="media-body pl-md-4">
+			                <h3 class="heading mb-3">Qualified Doctors</h3>
+			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+			              </div>
+			            </div>
+			          </div>
+			          <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services d-flex">
+			              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-stethoscope"></span></div>
+			              <div class="media-body pl-md-4">
+			                <h3 class="heading mb-3">Outdoors Checkup</h3>
+			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+			              </div>
+			            </div>
+			          </div>
+			          <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services d-flex">
+			              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-24-hours"></span></div>
+			              <div class="media-body pl-md-4">
+			                <h3 class="heading mb-3">24 Hours Service</h3>
+			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+		      </div>
+		      <div class="col-md-5 d-flex">
+	        	<div class="appointment-wrap bg-white p-5 d-flex align-items-center">
+		        	<form method="post" class="appointment-form ftco-animate">
+						{% csrf_token %}
+		        		<h3>Free Consultation</h3>
+		    				<div class="">
+			    				<div class="form-group">
+									{{ form.name }}
+<!--			    					<input type="text" class="form-control" placeholder="First Name">-->
+			    				</div>
+			    				<div class="form-group">
+									{{ form.surname }}
+<!--			    					<input type="text" class="form-control" placeholder="Last Name">-->
+			    				</div>
+								<div class="form-group">
+									{{ form.age }}
+<!--			    					<input type="number" class="form-control" placeholder="Age">-->
+			    				</div>
+		    				</div>
+		    				<div class="">
+		    					<div class="form-group">
+									{{ form.phone }}
+<!--			    					<input type="text" class="form-control" placeholder="Phone">-->
+			    				</div>
+		    				</div>
+		    				<div class="">
+			    				<div class="form-group">
+			    					<div class="input-wrap">
+										{{ form.date }}
+<!--			            		<input type="date" class="form-control appointment_date" placeholder="Date">-->
+		            		</div>
+			    				</div>
+			    				<div class="form-group">
+			    					<div class="input-wrap">
+										{{ form.time }}
+<!--			            		<input type="time" class="form-control appointment_time" placeholder="Time">-->
+		            		</div>
+			    				</div>
+		    				</div>
+		    				<div class="">
+		    					<div class="form-group">
+									{{ form.comment }}
+<!--			              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>-->
+			            </div>
+			            <div class="form-group">
+			              <input type="submit" value="Appointment" class="btn btn-secondary py-3 px-4">
+			            </div>
+		    				</div>
+		    			</form>
+		    		</div>
+	        </div>
+		    </div>
+			</div>
+		</section>
+{% endblock %}
